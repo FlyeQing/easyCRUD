@@ -6,45 +6,19 @@
  * Time: 21:47
  */
 include_once('connect.php');
-$list='';
-$query=
-    while
+$list = '';
+$query = mysql_query("select * from list order by id");
+while($row=mysql_fetch_array($query)){
+//    var_dump($row);
+    $list .= "<li rel='".$row['id']."'><span class='txt'>".$row['title']."</span><span class='edit' title='编辑'></span><span class='del' title='删除'></span></li>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>JQUERY+AJAX+PHP+MYSQL实现的简单增删改查</title>
-    <style>
-        .demo {
-            width: 500px;
-            margin: 50px auto;
-        }
-        .box {
-            border: 2px solid #35517c;
-            width: 200px;
-            margin: 0 auto;
-
-        }
-
-        .box-title {
-            font-size: 14px;
-            background: #C6D880;
-            padding: 5px;
-            border-bottom:2px solid #35517c;
-        }
-
-        .box-list {
-            padding:0 25px;
-        }
-
-        .box a {
-            text-decoration: none;
-            font-size: 12px;
-            padding-left:10px;
-            color: #0099CC;
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class="demo">
@@ -52,13 +26,12 @@ $query=
     <div class="box">
         <div class="box-title">客户类别</div>
         <ul class="box-list" id="list">
-            <?php echo $list;?>
-            <li>hello</li>
-            <li>h</li>
+            <?php echo $list; ?>
         </ul>
         <p><a id="btn" href="javascript:;">新增一项</a></p>
     </div>
 </div>
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+.demo {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.box {
+    border: 2px solid #35517c;
+    width: 300px;
+    margin: 0 auto;
+
+}
+
+.box-title {
+    font-size: 14px;
+    background: #C6D880;
+    padding: 5px;
+    border-bottom: 2px solid #35517c;
+}
+
+.box-list {
+    padding-left: 25px;
+}
+
+.box-list li {
+    line-height: 30px;
+    position: relative;
+}
+
+.box-list li.cur {
+    background: #a7c3f0;
+}
+
+.box a {
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 10px;
+    color: #0099CC;
+}
+
+/*新增一项:编辑框input、保存span、取消span*/
+.box-list .edit,.box-list .ok,.box-list .ok2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 25px;
+    background: url(../images/edits.gif) no-repeat 0 6px;
+    cursor: pointer;
+}
+
+.box-list .del,.box-list .cancel,.box-list .cancel2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 0;
+    background: url(../images/del.gif) no-repeat 0 6px;
+    cursor: pointer;
+}
+
+/*鼠标点击：编辑变为保存、删除变为取消*/
+.box-list .ok {
+    background: url(../images/ok.gif) no-repeat 0 5px;
+}
+.box-list .input {
+    width: 160px;
+    line-height: 26px;
+    padding: 2px;
+    border: 1px solid #d3d3d3;
+}

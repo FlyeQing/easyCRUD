@@ -19,6 +19,57 @@ CREATE TABLE list (
  ####3.1 NOT NULL default '0'：禁止为空，默认填充为0
  ####3.2 auto-increment :表中创建一个 auto-increment 字段，在每次插入新记录时，自动地创建主键字段的值
  ####3.3 PRIMARY KEY:主关键字(primary key)是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录
+ ####3.4 .$row['title']. 和 .=
+ <div>
+ <h2>PHP 字符串运算符</h2>
+ 
+ <table class="dataintable">
+ <tr>
+ <th>运算符</th>
+ <th>名称</th>
+ <th>例子</th>
+ <th>结果</th>
+ </tr>
+ 
+ <tr>
+ <td>.</td>
+ <td>串接</td>
+ <td>
+ $txt1 = &quot;Hello&quot;
+ $txt2 = $txt1 . &quot; world!&quot;
+ </td>
+ <td>现在 $txt2 包含 &quot;Hello world!&quot;</td>
+ </tr>
+ 
+ <tr>
+ <td>.=</td>
+ <td>串接赋值</td>
+ <td>
+ $txt1 = &quot;Hello&quot;
+ $txt1 .= &quot; world!&quot;
+ </td>
+ <td>现在 $txt1 包含 &quot;Hello world!&quot;</td>
+ </tr>
+ </table>
+ 
+ <p>下例展示了使用字符串运算符的结果：</p>
+ 
+ <h3>实例</h3>
+ 
+ <pre>
+ &lt;?php
+ $a = &quot;Hello&quot;;
+ $b = $a . &quot; world!&quot;;
+ echo $b; <span class="code_comment">// 输出 Hello world!</span>
+ 
+ $x=&quot;Hello&quot;;
+ $x .= &quot; world!&quot;;
+ echo $x; <span class="code_comment">// 输出 Hello world!</span>
+ ?&gt;
+ </pre>
+ 
+ <p class="tiy"><a target="_blank" href="/tiy/s.asp?f=demo_php_operator_string">运行实例</a></p>
+ </div>
  
  ###4.MySQL整型
 * MySQL整型：TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT的范围
