@@ -1,5 +1,6 @@
 #easyCRUD
 简单的增删改查，学习PHP+MySQL: <a href="http://www.w3school.com.cn/sql/sql_syntax.asp">sql语法</a>
+案例来自：<a href='http://www.thinkphp.cn/code/1172.html'>分类信息的增、删、改、查（Jquery+Ajax+PHP+MySQL）</a>
 
 ###1.插入记录：INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
 ```sql
