@@ -17,11 +17,11 @@ CREATE TABLE list (
   PRIMARY KEY  (`cid`)  
  ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
  ```
- ###3.相关用法
- ####3.1 NOT NULL default '0'：禁止为空，默认填充为0
- ####3.2 auto-increment :表中创建一个 auto-increment 字段，在每次插入新记录时，自动地创建主键字段的值
- ####3.3 PRIMARY KEY:主关键字(primary key)是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录
- ####3.4 .$row['title']. 和 .=
+###3.相关用法
+####3.1 NOT NULL default '0'：禁止为空，默认填充为0
+####3.2 auto-increment :表中创建一个 auto-increment 字段，在每次插入新记录时，自动地创建主键字段的值
+####3.3 PRIMARY KEY:主关键字(primary key)是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录
+####3.4 .$row['title']. 和 .=
  <div>
  <h2>PHP 字符串运算符</h2>
  
@@ -73,8 +73,13 @@ CREATE TABLE list (
 ###4.MySQL整型
  
 * MySQL整型：TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT的范围
+* 
 * TINYINT：有符号的范围是-128至127，无符号的范围是0到255，2的8 次方
+* 
 * SMALLINT：有符号的范围是-32768至32767，无符号的范围是0到65535，2的16次方
+* 
 * MEDIUMINT：有符号的范围是-8388608至8388607，无符号的范围是0到16777215，2的24次方
+* 
 * INT(integer)：有符号的范围是-2147483648至2147483647，无符号的范围是0到4294967295，2的32次方
+* 
 * BIGINT：有符号的范围是-9223372036854775808至9223372036854775807，无符号的范围是0到18446744073709551615，2的64次方
