@@ -69,8 +69,6 @@ CREATE TABLE list (
  echo $x; <span class="code_comment">// 输出 Hello world!</span>
  ?&gt;
  </pre>
- 
- <p class="tiy"><a target="_blank" href="/tiy/s.asp?f=demo_php_operator_string">运行实例</a></p>
  </div>
 ###4.MySQL整型
  
