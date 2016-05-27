@@ -1,13 +1,14 @@
 #easyCRUD
-�򵥵���ɾ�Ĳ飬ѧϰPHP+MySQL: <a href="http://www.w3school.com.cn/sql/sql_syntax.asp">sql�﷨</a>
-�������ԣ�<a href='http://www.thinkphp.cn/code/1172.html'>������Ϣ������ɾ���ġ��飨Jquery+Ajax+PHP+MySQL��</a>
+简单的增删改查，学习PHP+MySQL: [sql语法](http://www.w3school.com.cn/sql/sql_syntax.asp)
 
-###1.�����¼��INSERT INTO table_name (��1, ��2,...) VALUES (ֵ1, ֵ2,....)
+案例来自：[分类信息的增、删、改、查（Jquery+Ajax+PHP+MySQL](http://www.thinkphp.cn/code/1172.html)
+
+###1.插入记录：INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
 ```sql
-mysql> INSERT tb1 VALUES('TOM',25,5000);//����һ����¼��tom��25�꣬����5000
+mysql> INSERT tb1 VALUES('TOM',25,5000);//插入一条记录：tom，25岁，工资5000
 Query OK, 1 row affected
 ```
-###2.�������ݱ�:����һ����Ϊlist�����ݱ�
+###2.创建数据表:创建一个名为list的数据表
 ```sql
 CREATE TABLE list (  
   id int(11) NOT NULL auto_increment,  
@@ -16,71 +17,71 @@ CREATE TABLE list (
   PRIMARY KEY  (`cid`)  
  ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
  ```
- ###3.����÷�
- ####3.1 NOT NULL default '0'����ֹΪ�գ�Ĭ�����Ϊ0
- ####3.2 auto-increment :���д���һ�� auto-increment �ֶΣ���ÿ�β����¼�¼ʱ���Զ��ش��������ֶε�ֵ
- ####3.3 PRIMARY KEY:���ؼ���(primary key)�Ǳ��е�һ�������ֶΣ�����ֵ����Ψһ�ر�ʶ���е�ĳһ����¼
- ####3.4 .$row['title']. �� .=
+ ###3.相关用法
+ ####3.1 NOT NULL default '0'：禁止为空，默认填充为0
+ ####3.2 auto-increment :表中创建一个 auto-increment 字段，在每次插入新记录时，自动地创建主键字段的值
+ ####3.3 PRIMARY KEY:主关键字(primary key)是表中的一个或多个字段，它的值用于唯一地标识表中的某一条记录
+ ####3.4 .$row['title']. 和 .=
  <div>
- <h2>PHP �ַ��������</h2>
+ <h2>PHP 字符串运算符</h2>
  
  <table class="dataintable">
  <tr>
- <th>�����</th>
- <th>����</th>
- <th>����</th>
- <th>���</th>
+ <th>运算符</th>
+ <th>名称</th>
+ <th>例子</th>
+ <th>结果</th>
  </tr>
  
  <tr>
  <td>.</td>
- <td>����</td>
+ <td>串接</td>
  <td>
  $txt1 = &quot;Hello&quot;
  $txt2 = $txt1 . &quot; world!&quot;
  </td>
- <td>���� $txt2 ���� &quot;Hello world!&quot;</td>
+ <td>现在 $txt2 包含 &quot;Hello world!&quot;</td>
  </tr>
  
  <tr>
  <td>.=</td>
- <td>���Ӹ�ֵ</td>
+ <td>串接赋值</td>
  <td>
  $txt1 = &quot;Hello&quot;
  $txt1 .= &quot; world!&quot;
  </td>
- <td>���� $txt1 ���� &quot;Hello world!&quot;</td>
+ <td>现在 $txt1 包含 &quot;Hello world!&quot;</td>
  </tr>
  </table>
  
- <p>����չʾ��ʹ���ַ���������Ľ����</p>
+ <p>下例展示了使用字符串运算符的结果：</p>
  
- <h3>ʵ��</h3>
+ <h3>实例</h3>
  
  <pre>
  &lt;?php
  $a = &quot;Hello&quot;;
  $b = $a . &quot; world!&quot;;
- echo $b; <span class="code_comment">// ��� Hello world!</span>
+ echo $b; <span class="code_comment">// 输出 Hello world!</span>
  
  $x=&quot;Hello&quot;;
  $x .= &quot; world!&quot;;
- echo $x; <span class="code_comment">// ��� Hello world!</span>
+ echo $x; <span class="code_comment">// 输出 Hello world!</span>
  ?&gt;
  </pre>
  
- <p class="tiy"><a target="_blank" href="/tiy/s.asp?f=demo_php_operator_string">����ʵ��</a></p>
+ <p class="tiy"><a target="_blank" href="/tiy/s.asp?f=demo_php_operator_string">运行实例</a></p>
  </div>
  
- ###4.MySQL����
-* MySQL���ͣ�TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT�ķ�Χ
+ ###4.MySQL整型
+* MySQL整型：TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT的范围
   
-* TINYINT���з��ŵķ�Χ��-128��127���޷��ŵķ�Χ��0��255��2��8 �η�
+* TINYINT：有符号的范围是-128至127，无符号的范围是0到255，2的8 次方
 *  
-* SMALLINT���з��ŵķ�Χ��-32768��32767���޷��ŵķ�Χ��0��65535��2��16�η�
+* SMALLINT：有符号的范围是-32768至32767，无符号的范围是0到65535，2的16次方
 *  
-* MEDIUMINT���з��ŵķ�Χ��-8388608��8388607���޷��ŵķ�Χ��0��16777215��2��24�η�
+* MEDIUMINT：有符号的范围是-8388608至8388607，无符号的范围是0到16777215，2的24次方
 *  
-* INT(integer)���з��ŵķ�Χ��-2147483648��2147483647���޷��ŵķ�Χ��0��4294967295��2��32�η�
+* INT(integer)：有符号的范围是-2147483648至2147483647，无符号的范围是0到4294967295，2的32次方
 *  
-* BIGINT���з��ŵķ�Χ��-9223372036854775808��9223372036854775807���޷��ŵķ�Χ��0��18446744073709551615��2��64�η�
+* BIGINT：有符号的范围是-9223372036854775808至9223372036854775807，无符号的范围是0到18446744073709551615，2的64次方
