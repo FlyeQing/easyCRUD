@@ -72,16 +72,11 @@ CREATE TABLE list (
  
  <p class="tiy"><a target="_blank" href="/tiy/s.asp?f=demo_php_operator_string">运行实例</a></p>
  </div>
+###4.MySQL整型
  
- ###4.MySQL整型
 * MySQL整型：TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT的范围
-  
 * TINYINT：有符号的范围是-128至127，无符号的范围是0到255，2的8 次方
-*  
 * SMALLINT：有符号的范围是-32768至32767，无符号的范围是0到65535，2的16次方
-*  
 * MEDIUMINT：有符号的范围是-8388608至8388607，无符号的范围是0到16777215，2的24次方
-*  
 * INT(integer)：有符号的范围是-2147483648至2147483647，无符号的范围是0到4294967295，2的32次方
-*  
 * BIGINT：有符号的范围是-9223372036854775808至9223372036854775807，无符号的范围是0到18446744073709551615，2的64次方
